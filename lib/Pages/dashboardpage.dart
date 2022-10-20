@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/foodtabs.dart';
+import 'package:food_app/Widget/foodtabs_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'burgerpage.dart';
 
