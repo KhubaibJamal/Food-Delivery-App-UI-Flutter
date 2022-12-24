@@ -79,17 +79,21 @@ class _BurgerPageState extends State<BurgerPage> {
           const SizedBox(height: 15.0),
           Padding(
             padding: const EdgeInsets.only(left: 15.0),
-            child: Text('SUPER',
-                style: GoogleFonts.notoSans(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 27.0,
-                )),
+            child: Text(
+              'SUPER',
+              style: GoogleFonts.notoSans(
+                fontWeight: FontWeight.w800,
+                fontSize: 27.0,
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15.0),
-            child: Text(widget.foodName.toString().toUpperCase(),
-                style: GoogleFonts.notoSans(
-                    fontSize: 27.0, fontWeight: FontWeight.w800)),
+            child: Text(
+              widget.foodName.toString().toUpperCase(),
+              style: GoogleFonts.notoSans(
+                  fontSize: 27.0, fontWeight: FontWeight.w800),
+            ),
           ),
           const SizedBox(height: 40.0),
           Row(
@@ -98,12 +102,15 @@ class _BurgerPageState extends State<BurgerPage> {
               Hero(
                 tag: widget.heroTag,
                 child: Container(
-                    height: 200.0,
-                    width: 200.0,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(widget.imgPath),
-                            fit: BoxFit.cover))),
+                  height: 200.0,
+                  width: 200.0,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(widget.imgPath),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
               ),
               const SizedBox(width: 15.0),
               Column(
@@ -111,19 +118,20 @@ class _BurgerPageState extends State<BurgerPage> {
                   Stack(
                     children: [
                       Container(
-                          height: 45.0,
-                          width: 40.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            boxShadow: [
-                              BoxShadow(
-                                color: const Color(0xFFFE7D6A).withOpacity(0.1),
-                                spreadRadius: 6.0,
-                                blurRadius: 6.0,
-                                offset: const Offset(5.0, 11.0),
-                              )
-                            ],
-                          )),
+                        height: 45.0,
+                        width: 40.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0xFFFE7D6A).withOpacity(0.1),
+                              spreadRadius: 6.0,
+                              blurRadius: 6.0,
+                              offset: const Offset(5.0, 11.0),
+                            )
+                          ],
+                        ),
+                      ),
                       Container(
                         height: 50.0,
                         width: 50.0,
@@ -131,8 +139,11 @@ class _BurgerPageState extends State<BurgerPage> {
                             borderRadius: BorderRadius.circular(15.0),
                             color: Colors.white),
                         child: const Center(
-                          child: Icon(Icons.favorite_border,
-                              color: Color(0xFFFE7D6A), size: 25.0),
+                          child: Icon(
+                            Icons.favorite_border,
+                            color: Color(0xFFFE7D6A),
+                            size: 25.0,
+                          ),
                         ),
                       )
                     ],
@@ -141,19 +152,20 @@ class _BurgerPageState extends State<BurgerPage> {
                   Stack(
                     children: [
                       Container(
-                          height: 45.0,
-                          width: 40.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            boxShadow: [
-                              BoxShadow(
-                                color: const Color(0xFFFE7D6A).withOpacity(0.1),
-                                spreadRadius: 6.0,
-                                blurRadius: 6.0,
-                                offset: const Offset(5.0, 11.0),
-                              )
-                            ],
-                          )),
+                        height: 45.0,
+                        width: 40.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0xFFFE7D6A).withOpacity(0.1),
+                              spreadRadius: 6.0,
+                              blurRadius: 6.0,
+                              offset: const Offset(5.0, 11.0),
+                            )
+                          ],
+                        ),
+                      ),
                       Container(
                         height: 50.0,
                         width: 50.0,
@@ -194,10 +206,12 @@ class _BurgerPageState extends State<BurgerPage> {
                 height: 60.0,
                 width: 225.0,
                 decoration: const BoxDecoration(
-                    color: Color(0xFFFE7D6A),
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10.0),
-                        bottomLeft: Radius.circular(10.0))),
+                  color: Color(0xFFFE7D6A),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10.0),
+                    bottomLeft: Radius.circular(10.0),
+                  ),
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -210,14 +224,15 @@ class _BurgerPageState extends State<BurgerPage> {
                       child: Row(
                         children: [
                           IconButton(
-                              iconSize: 17.0,
-                              onPressed: () {
-                                adjustQuantity('MINUS');
-                              },
-                              icon: const Icon(
-                                Icons.remove,
-                                color: Color(0xFFFE7D6A),
-                              )),
+                            iconSize: 17.0,
+                            onPressed: () {
+                              adjustQuantity('MINUS');
+                            },
+                            icon: const Icon(
+                              Icons.remove,
+                              color: Color(0xFFFE7D6A),
+                            ),
+                          ),
                           Text(
                             quantity.toString(),
                             style: GoogleFonts.notoSans(
@@ -227,14 +242,15 @@ class _BurgerPageState extends State<BurgerPage> {
                             ),
                           ),
                           IconButton(
-                              iconSize: 17.0,
-                              onPressed: () {
-                                adjustQuantity('PLUS');
-                              },
-                              icon: const Icon(
-                                Icons.add,
-                                color: Color(0xFFFE7D6A),
-                              )),
+                            iconSize: 17.0,
+                            onPressed: () {
+                              adjustQuantity('PLUS');
+                            },
+                            icon: const Icon(
+                              Icons.add,
+                              color: Color(0xFFFE7D6A),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -265,7 +281,10 @@ class _BurgerPageState extends State<BurgerPage> {
             width: MediaQuery.of(context).size.width,
             child: ListView(
               scrollDirection: Axis.horizontal,
-              children: [_buildListItem('1'), _buildListItem('2')],
+              children: [
+                _buildListItem('1'),
+                _buildListItem('2'),
+              ],
             ),
           )
         ],
@@ -279,25 +298,41 @@ class _BurgerPageState extends State<BurgerPage> {
       child: Column(
         children: [
           if (columnNumber == '1')
-            _buildColumnItem('assets/cheese.png', 'Sweet cheese', '20',
-                const Color(0xFFFBD6F5)),
+            _buildColumnItem(
+              'assets/cheese.png',
+              'Sweet cheese',
+              '20',
+              const Color(0xFFFBD6F5),
+            ),
           if (columnNumber == '1')
             const SizedBox(
               height: 15.0,
             ),
           if (columnNumber == '1')
-            _buildColumnItem('assets/popcorn.png', 'Sweet Popcorn', '10',
-                const Color(0xFFFBD6F5)),
+            _buildColumnItem(
+              'assets/popcorn.png',
+              'Sweet Popcorn',
+              '10',
+              const Color(0xFFFBD6F5),
+            ),
           if (columnNumber == '2')
             _buildColumnItem(
-                'assets/taco.png', 'Taco', '15', const Color(0xFFC2E3FE)),
+              'assets/taco.png',
+              'Taco',
+              '15',
+              const Color(0xFFC2E3FE),
+            ),
           if (columnNumber == '2')
             const SizedBox(
               height: 15.0,
             ),
           if (columnNumber == '2')
-            _buildColumnItem('assets/sandwich.png', 'Sandwich', '12',
-                const Color(0xFFC2E3FE)),
+            _buildColumnItem(
+              'assets/sandwich.png',
+              'Sandwich',
+              '12',
+              const Color(0xFFC2E3FE),
+            ),
         ],
       ),
     );
@@ -309,45 +344,46 @@ class _BurgerPageState extends State<BurgerPage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-            width: 210.0,
-            child: Row(
-              children: [
-                Container(
-                  height: 75.0,
-                  width: 75.0,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.0),
-                      color: bgColor),
-                  child: Center(
-                    child: Image.asset(
-                      imgPath,
-                      height: 50.0,
-                      width: 50.0,
-                    ),
+          width: 210.0,
+          child: Row(
+            children: [
+              Container(
+                height: 75.0,
+                width: 75.0,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0), color: bgColor),
+                child: Center(
+                  child: Image.asset(
+                    imgPath,
+                    height: 50.0,
+                    width: 50.0,
                   ),
                 ),
-                const SizedBox(
-                  width: 20.0,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      foodName,
-                      style: GoogleFonts.notoSans(
-                          fontSize: 14.0, fontWeight: FontWeight.w400),
+              ),
+              const SizedBox(
+                width: 20.0,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    foodName,
+                    style: GoogleFonts.notoSans(
+                        fontSize: 14.0, fontWeight: FontWeight.w400),
+                  ),
+                  Text(
+                    '\$' + price,
+                    style: GoogleFonts.lato(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFFF68D7F),
                     ),
-                    Text(
-                      '\$' + price,
-                      style: GoogleFonts.lato(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w600,
-                          color: const Color(0xFFF68D7F)),
-                    )
-                  ],
-                )
-              ],
-            ))
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ],
     );
   }
